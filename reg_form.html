@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+.open-button
+ {
+  background-color: black;
+  color:azure;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  position: fixed;
+  width: 280px;
+}
+.form-popup
+ {
+  display: none;
+  position: absolute;
+  border: solid #f1f1f1;
+}
+.form-container 
+{
+  max-width: 1200px;
+  padding: 18px;
+  background-color: white;
+}
+.form-container input[type=text]
+ {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: wheat;
+ }
+ .form-container input[type=text]:focus
+ {
+  background-color: seashell;
+  outline: none;
+ }
+ .form-container .btn 
+ {
+  background-color:rgb(10, 10, 10);
+  color: whitesmoke;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel
+ {
+  background-color: red;
+}
+.form-container .btn:hover
+{
+  opacity: 1;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p{
+ width: 50%;
+}
+</style>
+</head>
+<body>
+    <h1>YOU OPENED A PAGE TO JOIN "BEYCAN" INSTITUTE</h1>
+    <button class="open-button" onclick="openForm()" >Open Form</button>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <center><h2 >BEYCAN<br>
+                        ________
+                <br>
+                B e l i e v e   Y o u  C a n<br>
+                Technical Training Institute
+                <hr>
+            </h2></center>
+            
+            <label for="course"><b>Course applied for      :</b></label>
+            <input type="text" placeholder="Enter Name" name="course" >
+            <label for="DOJ"><b>Date of joining         :</b></label>
+            <input type="text" placeholder="Enter DOJ" name="DOJ">
+            <lable for="reg.no"><b>Registration no        :</b></lable>
+            <input type="text" placeholder="reg.no" name="reg.no">
+            <h2>personal information</h2>
+            <label for="name"><b>Name                   :</b></label>
+            <input type="text" placeholder="Enter Name" name="name">
+            <lable for="DOB"><b>Date of birth          :</b></lable>
+            <input type="text" placeholder="Date of birth" name="DOB">
+            <lable for="FN" ><b>Father's Name          :</b></lable>
+            <input type="text" placeholder="Father's name" name="FN">
+            <lable for="FO" ><b>Father's Occupation     :</b></lable>
+            <input type="text" placeholder="Father's Occupation" name="FO">
+            <lable for="MN"><b>Mother's Name           :</b></lable>
+            <input type="text" placeholder="Mother's Name" name="MN">
+            <lable for="MO"><b>Mother's Occupation     :</b></lable>
+            <input type="text" placeholder="Mother's Occupation" name="MO">
+            <lable for="PA"><b>Present Address         :</b></lable>
+            <input type="text" placeholder="Address" name="PA">
+            <lable for="Mob no"><b>Mobile Number           :</b></lable>
+            <input type="text" placeholder="Mobile Number" name="Mob no">
+            <lable for="EQ"><b>Educational qualification:</b></lable>
+            <input type="text" placeholder="Educational qualification" name="EQ">
+            <lable for scn><b>School/College Name     :</b></lable>
+            <input type="text" placeholder="School/College Name " name="scn">
+            TERMS & CONDITIONS :<br>
+            <input type="checkbox" name="C1">
+            <lable for="C1"><b>afewghfiukfgeikgfbiefudgfbcukjfhadsufj</b></lable> <br>
+            <input type="checkbox" name="C2">
+            <lable for="C2"><b>afewghfiukfgeikgfbiefudgfbcukjfhadsufj</b></lable>
+            <br>
+            <input type="checkbox" name="C3">
+            <lable for="C3"><b>afewghfiukfgeikgfbiefudgfbcukjfhadsufj</b></lable>
+            <br>
+            <br>
+            DECLARATION :<br>
+                <h3>I hereby declare that i accept the above all terms & conditions and understood the rules applicable to beycan student</h3><br>
+                <p>
+                    <lable for="place" ><b>Place   :</b></lable>
+                    <input type="text" placeholder="Place" name="place">
+                    <lable for="Date" ><b>date    :</b></lable>
+                    <input type="text" placeholder="Date" name="Date">
+                </p>
+                <button type="button" class="btn" onclick="alert('Joined succcesfully')">Confirm</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>          
+        </form>
+    </div>
+    
+</body>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
